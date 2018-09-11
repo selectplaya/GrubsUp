@@ -17,5 +17,5 @@ export class AppComponent {
     
     
   }
-  title = 'app';
+  title = 'Grubs Up';
 }
