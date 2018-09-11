@@ -24,6 +24,7 @@ namespace GrupsUp.Api
         }
 
         public string Name { get; set; }
+        public string Image { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]
         public FoodCategoryModel Category { get; set; }

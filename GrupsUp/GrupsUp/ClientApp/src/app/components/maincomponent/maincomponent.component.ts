@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
+import { FoodService, Food } from "../../Services/FoodService";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-maincomponent',
@@ -8,6 +10,7 @@ import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/l
   styleUrls: ['./maincomponent.component.css']
 })
 export class MaincomponentComponent {
+  foods: Observable<Food[]>;
   /** Based on the screen size, switch from standard to one column per row */
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
@@ -29,5 +32,8 @@ export class MaincomponentComponent {
     })
   );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  constructor(private breakpointObserver: BreakpointObserver, private foodService: FoodService) {
+    this.foods = foodService.getFoods();
+  }
 }

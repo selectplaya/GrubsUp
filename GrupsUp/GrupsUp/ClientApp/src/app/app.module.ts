@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule , Injectable} from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MatDialogModule,MatTabsModule,MatProgressBarModule,MatTableModule,MatButtonModule, MatCheckboxModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule,MatFormFieldModule,MatInputModule } from '@angular/material';
@@ -9,6 +9,7 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { MaincomponentComponent } from './components/maincomponent/maincomponent.component';
+import { FoodService } from './Services/FoodService';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { MaincomponentComponent } from './components/maincomponent/maincomponent
     MatDialogModule,MatTabsModule,MatProgressBarModule,MatTableModule, MatInputModule , MatFormFieldModule, MatButtonModule,MatCheckboxModule, BrowserAnimationsModule, MatGridListModule, MatCardModule, MatMenuModule, MatIconModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatListModule, AppRoutingModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [FoodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

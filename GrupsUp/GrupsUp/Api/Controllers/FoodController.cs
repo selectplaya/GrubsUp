@@ -32,14 +32,16 @@ namespace GrupsUp.Api.Controllers
             foods.Add(new FoodModel()
             {
                 Name = "Chicken", Category = FoodCategoryModel.Meat,
-                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast}
+                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast},
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
             });
 
             foods.Add(new FoodModel()
             {
                 Name = "Potatoes",
                 Category = FoodCategoryModel.Vegetable,
-                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil, CookingMethodModel.Microwave }
+                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil, CookingMethodModel.Microwave },
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
             });
 
             foods.Add(new FoodModel()
@@ -47,7 +49,8 @@ namespace GrupsUp.Api.Controllers
                 Name = "Carrots",
                 Category = FoodCategoryModel.Vegetable,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
-                    CookingMethodModel.Microwave, CookingMethodModel.Steam }
+                    CookingMethodModel.Microwave, CookingMethodModel.Steam },
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
             });
 
             foods.Add(new FoodModel()
@@ -55,7 +58,8 @@ namespace GrupsUp.Api.Controllers
                 Name = "Peas",
                 Category = FoodCategoryModel.Vegetable,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
-                    CookingMethodModel.Microwave, CookingMethodModel.Steam }
+                    CookingMethodModel.Microwave, CookingMethodModel.Steam },
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
             });
 
             foods.Add(new FoodModel()
