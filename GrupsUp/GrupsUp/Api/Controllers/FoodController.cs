@@ -33,15 +33,24 @@ namespace GrupsUp.Api.Controllers
             {
                 Name = "Chicken", Category = FoodCategoryModel.Meat,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast},
-                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg",
+                BaseTime = 20* 60,
+                TimePerGram = 1200/450,
+                Tempature = 180,
+                PortionSize = 120,
+
             });
 
             foods.Add(new FoodModel()
             {
                 Name = "Potatoes",
-                Category = FoodCategoryModel.Vegetable,
+                Category = FoodCategoryModel.Carbs,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil, CookingMethodModel.Microwave },
-                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg",
+                BaseTime = 20 * 60,
+                TimePerGram = 1200 / 450,
+                Tempature = 180,
+                PortionSize = 120,
             });
 
             foods.Add(new FoodModel()
@@ -50,7 +59,11 @@ namespace GrupsUp.Api.Controllers
                 Category = FoodCategoryModel.Vegetable,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
                     CookingMethodModel.Microwave, CookingMethodModel.Steam },
-                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg",
+                BaseTime = 30 *60,
+                TimePerGram = 0,
+                Tempature = 180,
+                PortionSize = 60,
             });
 
             foods.Add(new FoodModel()
@@ -59,7 +72,11 @@ namespace GrupsUp.Api.Controllers
                 Category = FoodCategoryModel.Vegetable,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
                     CookingMethodModel.Microwave, CookingMethodModel.Steam },
-                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg"
+                Image = "https://material.angular.io/assets/img/examples/shiba1.jpg",
+                BaseTime = 4 *60,
+                TimePerGram = 0,
+                Tempature = 100,
+                PortionSize = 60,
             });
 
             foods.Add(new FoodModel()
@@ -67,7 +84,11 @@ namespace GrupsUp.Api.Controllers
                 Name = "Broccoli",
                 Category = FoodCategoryModel.Vegetable,
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
-                    CookingMethodModel.Microwave, CookingMethodModel.Steam }
+                    CookingMethodModel.Microwave, CookingMethodModel.Steam },
+                BaseTime = 15*60,
+                TimePerGram = 0,
+                Tempature = 100,
+                PortionSize = 60,
             });
 
             return Ok(foods);

@@ -7,6 +7,10 @@ export class Food {
   public category: string;
   public image: string;
   public cookingMethods: string[];
+  public BaseTime: number;
+  public TimePerGram: number;
+  public Tempature: number;
+  public PortionSize: number;
 
 }
 

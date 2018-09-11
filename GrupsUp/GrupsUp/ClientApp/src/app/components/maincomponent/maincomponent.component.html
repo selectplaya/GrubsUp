@@ -45,6 +45,12 @@
           <mat-list>
             <a mat-list-item *ngFor="let cookingMethod of food.cookingMethods"> {{ cookingMethod }} </a>
           </mat-list>
+          <p align="left">
+            Portion size: {{food.portionSize}}g 
+          </p>
+          <p align="left">
+            CookingTime .. TODO
+          </p>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
