@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace GrupsUp.ApiController
+namespace GrupsUp.Api.Controllers
 {
     public class BaseController : Controller
     {
