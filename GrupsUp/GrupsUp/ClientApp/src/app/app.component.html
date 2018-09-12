@@ -1,14 +1,14 @@
     <mat-toolbar  class="sidenav-container bg-info fixed-top ">
-  <!--<button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" >
-    <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+  <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" >
+    <mat-icon aria-label="Side nav toggle icon">reorder</mat-icon>
   </button> 
-  <a class="mx-3 text-white row" href="/">
+  <a class="mx-3 text-white row"[routerLink]="[ './']">
     Grub's Up
-  </a>-->
+  </a>
 </mat-toolbar>
 <mat-sidenav-container  >
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="true">
+               [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="true" >
     <mat-toolbar color="Primary">Menu</mat-toolbar>
     <mat-nav-list>
       <mat-list-item [routerLink]="[ './']">DashBoard</mat-list-item>
