@@ -14,6 +14,7 @@ import { AgmCoreModule } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { MaincomponentComponent } from './components/maincomponent/maincomponent.component';
 import { MeatcomponentComponent } from './components/meatcomponent/meatcomponent.component';
+import { TimercomponentComponent } from './components/timercomponent/timercomponent.component';
 import { FoodService } from './Services/FoodService';
 import { MainDataService } from './Services/MainDataService';
 
@@ -22,6 +23,7 @@ import { MainDataService } from './Services/MainDataService';
     AppComponent,
     MaincomponentComponent,
     MeatcomponentComponent,
+    TimercomponentComponent,
   ],
   entryComponents:[],
   imports: [

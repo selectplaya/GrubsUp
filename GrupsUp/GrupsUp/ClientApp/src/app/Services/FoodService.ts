@@ -25,6 +25,7 @@ export class FoodService {
   ) { }
 
   getFoods() {
+    //todo do not hard code url.... bad smelly code.
     return this.http.get<Food[]>( `http://localhost:2479/api/foods`);
   }
 }
