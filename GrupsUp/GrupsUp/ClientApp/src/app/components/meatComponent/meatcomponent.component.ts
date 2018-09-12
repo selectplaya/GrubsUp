@@ -14,6 +14,8 @@ import { Observable } from 'rxjs';
 
 export class MeatcomponentComponent {
   private name = 'MeatcomponentComponent';
+
+  //we use get and set so we can persit the values to a service so the value perists if you chnage components.
   get test(): string {
     return this.mainData.testData;
   }
