@@ -1,2 +1,15 @@
 <h1>Hello {{name}}</h1>
+<fieldset>
+  <legend>Login details:</legend>
 
+  <div class="username">
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="uname" required
+           minlength="4" maxlength="8"
+           placeholder="4 to 8 characters long"
+           [(ngModel)]="test" />
+    <span class="validity"></span>
+  </div>
+  <p>Hello {{test}}!</p>
+
+</fieldset>

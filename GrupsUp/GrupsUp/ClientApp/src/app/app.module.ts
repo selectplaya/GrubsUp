@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { MaincomponentComponent } from './components/maincomponent/maincomponent.component';
 import { MeatcomponentComponent } from './components/meatcomponent/meatcomponent.component';
 import { FoodService } from './Services/FoodService';
+import { MainDataService } from './Services/MainDataService';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { FoodService } from './Services/FoodService';
     MatCardModule, MatMenuModule, MatIconModule, LayoutModule, MatToolbarModule, MatSidenavModule, MatListModule, AppRoutingModule,
     AppRoutingModule,
   ],
-  providers: [FoodService],
+  providers: [FoodService, MainDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
