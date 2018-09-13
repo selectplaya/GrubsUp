@@ -23,6 +23,13 @@ export class MeatcomponentComponent {
     this.mainData.testData = value;
   }
 
+  get foods(): Observable<Food[]> {
+    return this.mainData.foods;
+  }
+  set foods(value: Observable<Food[]>) {
+    this.mainData.foods = value;
+  }
+
   constructor(private mainData: MainDataService) {
 
   }

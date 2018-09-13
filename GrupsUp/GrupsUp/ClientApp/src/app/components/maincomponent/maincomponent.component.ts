@@ -41,8 +41,6 @@ export class MaincomponentComponent {
   }
 
   constructor(private breakpointObserver: BreakpointObserver,
-    private foodService: FoodService,
     private mainData: MainDataService) {
-    this.foods = foodService.getFoods();
   }
 }

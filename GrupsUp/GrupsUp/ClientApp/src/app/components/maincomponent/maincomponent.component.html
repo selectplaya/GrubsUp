@@ -1,58 +1,23 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Dashboard</h1>
-  <!--<mat-grid-list cols="2" rowHeight="350px">
-    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-card-title>
-            {{card.title}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <div>Card Content Here</div>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>-->
-  <mat-grid-list cols="2" rowHeight="500px">
-    <mat-grid-tile *ngFor="let food of foods | async" [colspan]="1" [rowspan]="1">
-      <mat-card class="dashboard-card">
-        <mat-card-header>
-          <mat-icon>alarm</mat-icon>
-          <!--<div mat-card-avatar src="{{food.image}}"></div>-->
-          <!--<div  mat-card-avatar class="example-header-image"></div>-->
-          <mat-card-title>
-            {{food.name}}
-            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-              <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu" xPosition="before">
-              <button mat-menu-item>Expand</button>
-              <button mat-menu-item>Remove</button>
-            </mat-menu>
-          </mat-card-title>
-        </mat-card-header>
-        <mat-card-content class="dashboard-card-content">
-          <mat-card-subtitle>Category: {{food.category}}</mat-card-subtitle>
-          <mat-card-subtitle>Cooking Methods</mat-card-subtitle>
-          <mat-list>
-            <a mat-list-item *ngFor="let cookingMethod of food.cookingMethods"> {{ cookingMethod }} </a>
-          </mat-list>
-          <p align="left">
-            Portion size: {{food.portionSize}}g 
-          </p>
-          <p align="left">
-            CookingTime .. TODO
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<div>
+  <body>
+  <header>
+    <h2>Welcome to Grub's Up </h2>
+  </header>
+ 
+  <p>Cooking one dish is easy, but cooking multiple dishes is tricky.</p>
+
+  <section>
+
+    <article>
+      <h1>Timing</h1>
+      <p>Different type's of food take different amounts of time to cook. Some require to rest afterwords, so getting the timing perfect and know when to put food on and take it out of the oven s tricky.</p>
+      <p>Grub's up takes all the difficult work out of timing, and will even help suggest the protions sizes to use. Simple select how many people you are cooking for and the food you want to cook. All the timings will be worked out for you so everything is ready to serve at once.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p class="bottomright">Fuller Productions ©</p>
+  </footer>
+
+  </body>
 </div>

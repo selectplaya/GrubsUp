@@ -7,4 +7,8 @@ import { FoodService, Food } from "./FoodService";
 export class MainDataService {
   public testData: string;
   public foods: Observable<Food[]>;
+
+  constructor(private foodService: FoodService) {
+    this.foods = foodService.getFoods();
+  }
 }
