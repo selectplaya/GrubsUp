@@ -8,9 +8,9 @@ export class MainDataService {
   public testData: string;
   public foods: Observable<SelectedFood[]>;
   public selectedFood: SelectedFood;
-  public numberOfPortions: string;
+  public numberOfPortions: number = 1;
 
   constructor(private foodService: FoodService) {
-    this.foods = foodService.getFoods();
+   this.foods = foodService.getFoods();
   }
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
-import { FoodService, Food } from "../../Services/FoodService";
+import { FoodService, Food, SelectedFood } from "../../Services/FoodService";
 import { MainDataService } from "../../Services/MainDataService";
 import { Observable } from 'rxjs';
 
@@ -11,5 +11,17 @@ import { Observable } from 'rxjs';
     styleUrls: [ 'timercomponent.component.css'],
 })
 export class TimercomponentComponent {
-    private name = 'TimercomponentComponent';
+  private name = 'TimercomponentComponent';
+  private get itemsToCook() {
+    return this.mainData.foods;
+  }
+
+  constructor(private mainData: MainDataService) {
+
+   
+  }
+
+  public cook() {
+    
+  }
 }

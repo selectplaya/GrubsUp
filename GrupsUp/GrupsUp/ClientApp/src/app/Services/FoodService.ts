@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class Food {
   public name: string;
+  public description: string;
   public category: string;
   public image: string;
   public cookingMethods: string[];
@@ -16,11 +17,10 @@ export class Food {
 
 @Injectable()
 export class SelectedFood extends Food{
-
   public selectedCookingMethod: string;
   public weight: number;
   public selectedRarity: string;
-  public isSelected : boolean;
+  public isSelected: boolean;
 }
 
 

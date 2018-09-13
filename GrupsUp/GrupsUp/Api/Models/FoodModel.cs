@@ -24,6 +24,7 @@ namespace GrupsUp.Api
         }
 
         public string Name { get; set; }
+        public string Description { get; set; }
         public string Image { get; set; }
 
         [JsonConverter(typeof(StringEnumConverter))]

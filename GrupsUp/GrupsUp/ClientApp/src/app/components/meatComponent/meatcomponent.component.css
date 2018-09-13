@@ -83,3 +83,23 @@ article {
   background-color: #f1f1f1;
 
 }
+
+.card-image {
+  height: 250px;
+  width: 250px;
+ 
+}
+
+.peopleform {
+  overflow: hidden;
+}
+
+.peopleicon {
+  float: left;
+}
+.peopleinput {
+  overflow: hidden;
+  padding-left: 6px;
+  width: 60px;
+  
+}

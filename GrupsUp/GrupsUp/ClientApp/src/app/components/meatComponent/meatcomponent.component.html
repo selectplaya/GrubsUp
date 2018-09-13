@@ -1,6 +1,14 @@
-<div class="grid-container">
-  <h1 class="mat-h1">Options</h1>
 
+
+<div class="grid-container">
+  <h1 class="mat-h1">Pick your food</h1>
+
+  <mat-form-field  class="peopleform" style="font-weight: bold" >
+    <mat-icon class="peopleicon">people</mat-icon>
+    <input class="peopleinput" matInput type="number"    [(ngModel)]="people"
+           name="People" >
+  
+  </mat-form-field>
 
   <section>
     <nav>
@@ -15,14 +23,19 @@
 
     <article>
       <mat-card>
-        <mat-card-header>
-          <mat-icon>alarm</mat-icon>
+        <img class="card-image" mat-card-image src={{selectedFood.image}} >
 
-          <!--<div  mat-card-avatar class="example-header-image"></div>-->
+        <mat-card-header>
+          <mat-checkbox
+            [checked]="selectedFood.isSelected" 
+            (change)="valueChange(food,$event)">
+            Cook me!</mat-checkbox>
           <mat-card-title>
             {{selectedFood.name}}
           </mat-card-title>
+          <mat-card-subtitle>{{selectedFood.description}}</mat-card-subtitle>
         </mat-card-header>
+
         <mat-card-content class="dashboard-card-content">
           <mat-card-subtitle>Category: {{selectedFood.category}}</mat-card-subtitle>
           <mat-card-subtitle>Cooking Methods</mat-card-subtitle>
@@ -30,11 +43,11 @@
             <a mat-list-item *ngFor="let cookingMethod of selectedFood.cookingMethods"> {{ cookingMethod }} </a>
           </mat-list>
           <p align="left">
-            Portion size: {{selectedFood.portionSize}}g <br />
-            <b>CookingTime .. TODo</b> <br />
-            CookingTime .. TODo <br />
-            CookingTime .. TODo <br />
-            CookingTime .. TODo <br />
+            Portion size: {{selectedFood.portionSize}}g <br/>
+            <b>CookingTime .. TODo</b> <br/>
+            CookingTime .. TODo <br/>
+            CookingTime .. TODo <br/>
+            CookingTime .. TODo <br/>
           </p>
 
         </mat-card-content>

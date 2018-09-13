@@ -24,6 +24,21 @@ export class MeatcomponentComponent {
     this.mainData.testData = value;
   }
 
+  get people(): number {
+    return this.mainData.numberOfPortions;
+  }
+  set people(value: number) {
+    this.mainData.numberOfPortions = value;
+  }
+
+  get isSelected(): boolean {
+    return this.mainData.selectedFood.isSelected;
+  }
+  set isSelected(value: boolean) {
+    
+    this.mainData.selectedFood.isSelected = value;
+  }
+
   private _foods: Observable<SelectedFood[]>;
 
   get foods(): Observable<SelectedFood[]> {
@@ -39,15 +54,21 @@ export class MeatcomponentComponent {
 
 
   constructor(private mainData: MainDataService, private router: Router) {
-    this._foods =this.mainData.foods ;
+    this._foods = this.mainData.foods;
   }
 
   public showInfo(food: SelectedFood) {
     this.mainData.selectedFood = food;
+    //this.isSelected = this.mainData.selectedFood.isSelected;
   }
 
   public cook() {
     this.router.navigate(['./timer']);
+  }
+
+  public valueChange(food: SelectedFood, $event) {
+  //set the two-way binding here for the specific unit with the event
+    this.isSelected = !this.isSelected;
   }
 }
 
