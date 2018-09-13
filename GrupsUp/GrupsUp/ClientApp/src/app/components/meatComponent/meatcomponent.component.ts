@@ -53,7 +53,7 @@ export class MeatcomponentComponent {
   }
 
 
-  constructor(private mainData: MainDataService, private router: Router) {
+  constructor(public mainData: MainDataService, private router: Router) {
     this._foods = this.mainData.foods;
   }
 

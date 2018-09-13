@@ -13,7 +13,7 @@
   <section>
     <nav>
       <mat-list>
-        <mat-list-item *ngFor="let food of foods | async">
+        <mat-list-item *ngFor="let food of mainData.foods | async">
           <button mat-icon-button (click)="showInfo(food)" class="list-button">
             {{ food.name }}
           </button>
@@ -27,27 +27,27 @@
 
         <mat-card-header>
           <mat-checkbox
-            [checked]="selectedFood.isSelected" 
+            [checked]="mainData.selectedFood.isSelected" 
             (change)="valueChange(food,$event)">
             Cook me!</mat-checkbox>
           <mat-card-title>
-            {{selectedFood.name}}
+            {{mainData.selectedFood.name}}
           </mat-card-title>
-          <mat-card-subtitle>{{selectedFood.description}}</mat-card-subtitle>
+          <mat-card-subtitle>{{mainData.selectedFood.description}}</mat-card-subtitle>
         </mat-card-header>
 
         <mat-card-content class="dashboard-card-content">
-          <mat-card-subtitle>Category: {{selectedFood.category}}</mat-card-subtitle>
+          <mat-card-subtitle>Category: {{mainData.selectedFood.category}}</mat-card-subtitle>
           <mat-card-subtitle>Cooking Methods</mat-card-subtitle>
           <mat-list>
-            <a mat-list-item *ngFor="let cookingMethod of selectedFood.cookingMethods"> {{ cookingMethod }} </a>
+            <a mat-list-item *ngFor="let cookingMethod of mainData.selectedFood.cookingMethods"> {{ cookingMethod }} </a>
           </mat-list>
           <p align="left">
-            Portion size: {{selectedFood.portionSize}}g <br/>
-            <b>CookingTime .. TODo</b> <br/>
-            CookingTime .. TODo <br/>
-            CookingTime .. TODo <br/>
-            CookingTime .. TODo <br/>
+            Portion size: {{mainData.selectedFood.portionSize}}g <br />
+            <b>CookingTime .. TODo</b> <br />
+            CookingTime .. TODo <br />
+            CookingTime .. TODo <br />
+            CookingTime .. TODo <br />
           </p>
 
         </mat-card-content>

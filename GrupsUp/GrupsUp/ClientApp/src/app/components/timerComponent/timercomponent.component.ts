@@ -12,11 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class TimercomponentComponent {
   private name = 'TimercomponentComponent';
-  private get itemsToCook() {
-    return this.mainData.foods;
-  }
 
-  constructor(private mainData: MainDataService) {
+  constructor(public mainData: MainDataService) {
 
    
   }
