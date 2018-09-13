@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
-import { FoodService, Food } from "../../Services/FoodService";
+import { FoodService, Food, SelectedFood} from "../../Services/FoodService";
 import { MainDataService } from "../../Services/MainDataService";
 import { Observable } from 'rxjs';
 
@@ -23,19 +24,30 @@ export class MeatcomponentComponent {
     this.mainData.testData = value;
   }
 
-  get foods(): Observable<Food[]> {
-    return this.mainData.foods;
+  private _foods: Observable<SelectedFood[]>;
+
+  get foods(): Observable<SelectedFood[]> {
+    return this._foods;
   }
-  set foods(value: Observable<Food[]>) {
-    this.mainData.foods = value;
+  //set foods(value: Observable<Food[]>) {
+  //  this.mainData.foods = value;
+  //}
+
+  get selectedFood(): SelectedFood {
+    return this.mainData.selectedFood;
   }
 
-  constructor(private mainData: MainDataService) {
 
+  constructor(private mainData: MainDataService, private router: Router) {
+    this._foods =this.mainData.foods ;
   }
 
-  public showInfo(food: Food) {
-    this.test =food.name;
+  public showInfo(food: SelectedFood) {
+    this.mainData.selectedFood = food;
+  }
+
+  public cook() {
+    this.router.navigate(['./timer']);
   }
 }
 

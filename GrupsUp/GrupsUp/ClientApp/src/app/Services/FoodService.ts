@@ -14,6 +14,15 @@ export class Food {
 
 }
 
+@Injectable()
+export class SelectedFood extends Food{
+
+  public selectedCookingMethod: string;
+  public weight: number;
+  public selectedRarity: string;
+  public isSelected : boolean;
+}
+
 
 
 
@@ -26,7 +35,7 @@ export class FoodService {
 
   getFoods() {
     //todo do not hard code url.... bad smelly code.
-    return this.http.get<Food[]>( `http://localhost:2479/api/foods`);
+    return this.http.get<SelectedFood[]>( `http://localhost:2479/api/foods`);
   }
 }
 

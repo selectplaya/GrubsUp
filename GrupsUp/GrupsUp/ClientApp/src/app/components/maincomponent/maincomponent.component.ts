@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
-import { FoodService, Food } from "../../Services/FoodService";
+import { FoodService, Food, SelectedFood} from "../../Services/FoodService";
 import { MainDataService } from "../../Services/MainDataService";
 import { Observable } from 'rxjs';
 
@@ -33,10 +33,10 @@ export class MaincomponentComponent {
     })
   );
 
-  get foods(): Observable<Food[]> {
+  get foods(): Observable<SelectedFood[]> {
     return this.mainData.foods;
   }
-  set foods(value: Observable<Food[]>) {
+  set foods(value: Observable<SelectedFood[]>) {
     this.mainData.foods = value;
   }
 
