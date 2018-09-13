@@ -33,5 +33,9 @@ export class MeatcomponentComponent {
   constructor(private mainData: MainDataService) {
 
   }
+
+  public showInfo(food: Food) {
+    this.test =food.name;
+  }
 }
 

@@ -64,9 +64,9 @@ input:valid + span:after {
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
-  width: 30%;
-
-  background: #ccc;
+  width: 15%;
+  height: 100%;
+  background: #33AEB9;
   padding: 20px;
 }
 
@@ -76,7 +76,7 @@ nav {
 article {
   float: left;
   padding: 20px;
-  width: 70%;
+  width: 85%;
   background-color: #f1f1f1;
 
 }

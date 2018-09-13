@@ -5,9 +5,12 @@
   <section>
     <nav>
       <mat-list>
-        <mat-list-item> Pepper </mat-list-item>
-        <mat-list-item> Salt </mat-list-item>
-        <mat-list-item> Paprika </mat-list-item>
+        <mat-list-item *ngFor="let food of foods |async">
+          <!--<a matLine ></a>-->
+          <button mat-icon-button (click)="showInfo(food)">
+            {{ food.name }}
+          </button>
+        </mat-list-item>
       </mat-list>
     </nav>
 
