@@ -49,7 +49,7 @@ namespace GrupsUp.Api.Controllers
                 CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil, CookingMethodModel.Microwave },
                 Image = "https://images.unsplash.com/photo-1533384159656-84b8ae5ce5e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=255a81431ee1998226e0061c2199b0db&auto=format&fit=crop&w=634&q=80",
                 BaseTime = 20 * 60,
-                TimePerGram = 1200 / 450,
+                TimePerGram = 1,
                 Tempature = 180,
                 PortionSize = 120,
             });
