@@ -17,7 +17,7 @@
   <section>
     <nav>
       <mat-list>
-        <mat-list-item *ngFor="let food of mainData.foods | async">
+        <mat-list-item *ngFor="let food of mainData.foods2 ">
           <button mat-icon-button (click)="showInfo(food)" class="list-button">
             {{ food.name }}
           </button>

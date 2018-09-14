@@ -2,7 +2,7 @@
 <h1>You are cooking for {{mainData.numberOfPortions}} people.</h1>
 <h1>Time Left: {{testCurrentTime}}</h1>
 <div *ngFor="let item of mainData.foods2 ">
-    <mat-card>
+    <mat-card *ngIf="item.isSelected">
       <mat-card-header>
 
         <mat-card-title>

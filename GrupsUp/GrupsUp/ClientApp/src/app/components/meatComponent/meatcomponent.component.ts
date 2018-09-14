@@ -56,24 +56,24 @@ export class MeatcomponentComponent {
     }
   }
 
-  get timers(): Observable<SelectedFood[]> {
-    //let localTimers = SelectedFood[];
-    //this.foods.subscribe(x => {
-    //  x.forEach(y => {
-    //    if ( this.mainData.selectedFoods.has(y.name)) {
-    //      localTimers.push(y);
-    //    }
-    //  });
-    //});
+  //get timers(): Observable<SelectedFood[]> {
+  //  //let localTimers = SelectedFood[];
+  //  //this.foods.subscribe(x => {
+  //  //  x.forEach(y => {
+  //  //    if ( this.mainData.selectedFoods.has(y.name)) {
+  //  //      localTimers.push(y);
+  //  //    }
+  //  //  });
+  //  //});
 
-    //return localTimers;
-    return this.mainData.foods;
-  }
+  //  //return localTimers;
+  //  return this.mainData.foods;
+  //}
 
 
-  get foods(): Observable<SelectedFood[]> {
-  return this.mainData.foods;
-}
+//  get foods(): Observable<SelectedFood[]> {
+//  return this.mainData.foods;
+//}
 
   get selectedFood(): SelectedFood {
     return this.mainData.selectedFood;

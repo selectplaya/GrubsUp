@@ -19,15 +19,15 @@ export class TimercomponentComponent {
   private name = 'TimercomponentComponent';
 
 
-  foods: SelectedFood[] = [];
+ // foods: SelectedFood[] = [];
 
   public testOrgTime = 10000;
   public testCurrentTime = 10000;
   private isRunning : boolean = false;
   constructor(public mainData: MainDataService) {
-    mainData.foods.subscribe(x => {
-      this.foods = x;
-    });
+    //mainData.foods.subscribe(x => {
+    //  this.foods = x;
+    //});
 
   }
 
