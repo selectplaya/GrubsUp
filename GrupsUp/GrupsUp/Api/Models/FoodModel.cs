@@ -33,6 +33,7 @@ namespace GrupsUp.Api
         [JsonProperty(ItemConverterType = typeof(StringEnumConverter))]
         public ISet<CookingMethodModel> CookingMethods { get; set; }
 
+        public int CookingTime { get; set; } = 40;
         public int BaseTime { get; set; }
         public int TimePerGram { get; set; }
         public int Tempature { get; set; }

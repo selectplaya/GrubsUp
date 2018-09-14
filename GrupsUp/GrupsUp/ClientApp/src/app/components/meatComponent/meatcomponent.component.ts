@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { Breakpoints, BreakpointState, BreakpointObserver } from '@angular/cdk/layout';
 import { FoodService, Food, SelectedFood} from "../../Services/FoodService";
 import { MainDataService } from "../../Services/MainDataService";
-import { Observable } from 'rxjs';
+import { Observable, timer} from 'rxjs';
 
 @Component({
     selector: 'app-meatcomponent',
@@ -31,17 +31,43 @@ export class MeatcomponentComponent {
     this.mainData.numberOfPortions = value;
   }
 
+  get selectedFoods(): string {
+    let result = "";
+    this.mainData.selectedFoods.forEach(s => {
+      result = result + s + ",";
+    });
+    result = result.substring(0, result.length - 1);
+    return result;
+  }
   get isSelected(): boolean {
+    if (this.mainData.selectedFoods.has(this.mainData.selectedFood.name)) {
+      return true;
+    }
+
     return this.mainData.selectedFood.isSelected;
   }
   set isSelected(value: boolean) {
     
     this.mainData.selectedFood.isSelected = value;
-    //if (value) {
-    //  this.mainData.selectedFoods.add(this.mainData.selectedFood.name);
-    //} else {
-    //  this.mainData.selectedFoods.delete(this.mainData.selectedFood.name);
-    //}
+    if (value) {
+      this.mainData.selectedFoods.add(this.mainData.selectedFood.name);
+    } else {
+      this.mainData.selectedFoods.delete(this.mainData.selectedFood.name);
+    }
+  }
+
+  get timers(): Observable<SelectedFood[]> {
+    //let localTimers = SelectedFood[];
+    //this.foods.subscribe(x => {
+    //  x.forEach(y => {
+    //    if ( this.mainData.selectedFoods.has(y.name)) {
+    //      localTimers.push(y);
+    //    }
+    //  });
+    //});
+
+    //return localTimers;
+    return this.mainData.foods;
   }
 
 
@@ -62,6 +88,16 @@ export class MeatcomponentComponent {
   }
 
   public cook() {
+    //var myTimer = timer(0, 1000);
+    //myTimer.subscribe(time => {
+
+    //  if (this.testCurrentTime > 0) {
+    //    this.testCurrentTime = this.testOrgTime - time;
+    //  } else {
+    //    myTimer = null;
+    //  }
+    //});
+
     this.router.navigate(['./timer']);
   }
 

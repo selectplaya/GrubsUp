@@ -23,7 +23,7 @@ export class SelectedFood extends Food{
   public selectedRarity: string;
   public isSelected: boolean;
   public waitTime: number;
-  public cookingTime: number;
+  public cookingTime: number =100;
   public restTime: number;
 }
 

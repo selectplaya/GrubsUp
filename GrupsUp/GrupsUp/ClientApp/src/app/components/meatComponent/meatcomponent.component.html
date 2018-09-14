@@ -9,7 +9,11 @@
            name="People" >
   
   </mat-form-field>
-
+  <div > 
+    <h1>
+      Selected foods: {{selectedFoods}}<br/>
+    </h1>
+  </div>
   <section>
     <nav>
       <mat-list>
@@ -33,7 +37,7 @@
           <mat-card-subtitle>{{mainData.selectedFood.description}}</mat-card-subtitle>
           <mat-card-subtitle>
             <mat-checkbox align="left"
-                          [checked]="mainData.selectedFood.isSelected" 
+                          [checked]="isSelected" 
                           (change)="valueChange(food,$event)">
               Cook me!</mat-checkbox> <br/>
             Recommended Portion size: {{mainData.selectedFood.portionSize}}g <br/>
@@ -45,6 +49,9 @@
     </article>
   </section>
 
+
+</div>
+<div *ngFor="let food of timers | async">
 
 </div>
 <div>

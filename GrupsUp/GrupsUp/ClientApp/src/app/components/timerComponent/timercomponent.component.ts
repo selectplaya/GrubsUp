@@ -19,11 +19,15 @@ export class TimercomponentComponent {
   private name = 'TimercomponentComponent';
 
 
-  public testOrgTime = 10;
-  public testCurrentTime = 10;
+  foods: SelectedFood[] = [];
+
+  public testOrgTime = 10000;
+  public testCurrentTime = 10000;
 
   constructor(public mainData: MainDataService) {
-
+    mainData.foods.subscribe(x => {
+      this.foods = x;
+    });
 
   }
 
@@ -33,6 +37,13 @@ export class TimercomponentComponent {
 
       if (this.testCurrentTime > 0) {
         this.testCurrentTime = this.testOrgTime - time;
+
+        this.foods.forEach(x => {
+          if (x.cookingTime > 0) {
+            x.cookingTime = x.cookingTime - 1;
+          }
+        
+        });
       } else {
          myTimer = null;
       }
