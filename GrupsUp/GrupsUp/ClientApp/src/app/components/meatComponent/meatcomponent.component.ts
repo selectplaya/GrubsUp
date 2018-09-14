@@ -44,11 +44,10 @@ export class MeatcomponentComponent {
     //}
   }
 
-  private _foods: Observable<SelectedFood[]>;
 
   get foods(): Observable<SelectedFood[]> {
-    return this._foods;
-  }
+  return this.mainData.foods;
+}
 
   get selectedFood(): SelectedFood {
     return this.mainData.selectedFood;
@@ -56,7 +55,6 @@ export class MeatcomponentComponent {
 
 
   constructor(public mainData: MainDataService, private router: Router) {
-    this._foods = this.mainData.foods;
   }
 
   public showInfo(food: SelectedFood) {

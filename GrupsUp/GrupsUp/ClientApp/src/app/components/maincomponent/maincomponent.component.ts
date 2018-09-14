@@ -33,12 +33,12 @@ export class MaincomponentComponent {
     })
   );
 
-  get foods(): Observable<SelectedFood[]> {
-    return this.mainData.foods;
-  }
-  set foods(value: Observable<SelectedFood[]>) {
-    this.mainData.foods = value;
-  }
+  //get foods(): Observable<SelectedFood[]> {
+  //  return this.mainData.foods;
+  //}
+  //set foods(value: Observable<SelectedFood[]>) {
+  //  this.mainData.foods = value;
+  //}
 
   constructor(private breakpointObserver: BreakpointObserver,
     private mainData: MainDataService) {
