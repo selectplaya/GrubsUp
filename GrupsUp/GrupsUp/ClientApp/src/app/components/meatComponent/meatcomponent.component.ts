@@ -56,25 +56,6 @@ export class MeatcomponentComponent {
     }
   }
 
-  //get timers(): Observable<SelectedFood[]> {
-  //  //let localTimers = SelectedFood[];
-  //  //this.foods.subscribe(x => {
-  //  //  x.forEach(y => {
-  //  //    if ( this.mainData.selectedFoods.has(y.name)) {
-  //  //      localTimers.push(y);
-  //  //    }
-  //  //  });
-  //  //});
-
-  //  //return localTimers;
-  //  return this.mainData.foods;
-  //}
-
-
-//  get foods(): Observable<SelectedFood[]> {
-//  return this.mainData.foods;
-//}
-
   get selectedFood(): SelectedFood {
     return this.mainData.selectedFood;
   }
@@ -88,15 +69,6 @@ export class MeatcomponentComponent {
   }
 
   public cook() {
-    //var myTimer = timer(0, 1000);
-    //myTimer.subscribe(time => {
-
-    //  if (this.testCurrentTime > 0) {
-    //    this.testCurrentTime = this.testOrgTime - time;
-    //  } else {
-    //    myTimer = null;
-    //  }
-    //});
 
     this.router.navigate(['./timer']);
   }

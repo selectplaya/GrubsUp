@@ -6,9 +6,12 @@
       <mat-card-header>
 
         <mat-card-title>
-          {{item.name}} selected don't know ... <br/>
-          Start Cooking in: {{item.waitTime}} secs <br/>
-          Time remaining: {{item.cookingTime}} secs
+          <b>  {{item.name}} </b>  <br />
+          Start Cooking in: {{item.waitTime}} secs <br />
+          Time remaining: {{item.cookingTime}} secs <br />
+          <mat-icon *ngIf="item.cookingTime == 0">done</mat-icon>
+          <mat-icon *ngIf="item.waitTime !=0">pan_tool</mat-icon>
+          <mat-icon *ngIf="item.waitTime ==0 && item.cookingTime != 0 ">watch_later</mat-icon>
         </mat-card-title>
       </mat-card-header>
     </mat-card>

@@ -24,11 +24,7 @@ export class TimercomponentComponent {
 
   }
 
-  public cook() {
-    if (this.isRunning) {
-      return;
-    }
-
+  public setTimer() {
     let longestTime = 0;
     this.mainData.foods2.forEach(x => {
       if (x.isSelected) {
@@ -48,6 +44,14 @@ export class TimercomponentComponent {
       }
     });
     this.testCurrentTime = longestTime;
+  }
+
+  public cook() {
+    if (this.isRunning) {
+      return;
+    }
+    this.setTimer();
+    
 
     var myTimer = timer(0, 1000);
     myTimer.subscribe(time => {
