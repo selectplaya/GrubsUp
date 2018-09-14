@@ -9,10 +9,10 @@ export class Food {
   public category: string;
   public image: string;
   public cookingMethods: string[];
-  public BaseTime: number;
-  public TimePerGram: number;
-  public Tempature: number;
-  public PortionSize: number;
+  public baseTime: number;
+  public timePerGram: number;
+  public tempature: number;
+  public portionSize: number;
 
 }
 
@@ -23,7 +23,7 @@ export class SelectedFood extends Food{
   public selectedRarity: string;
   public isSelected: boolean;
   public waitTime: number;
-  public cookingTime: number =100;
+  public cookingTime: number;
   public restTime: number;
 }
 

@@ -1,13 +1,14 @@
 <h1>Orders up Chief!</h1>
 <h1>You are cooking for {{mainData.numberOfPortions}} people.</h1>
-<h1>Time Left: {{testCurrentTime}}</h1>
+<h1>Time remaining: {{testCurrentTime}} secs</h1>
 <div *ngFor="let item of mainData.foods2 ">
     <mat-card *ngIf="item.isSelected">
       <mat-card-header>
 
         <mat-card-title>
           {{item.name}} selected don't know ... <br/>
-          CookingTime: {{item.cookingTime}}
+          Start Cooking in: {{item.waitTime}} secs <br/>
+          Time remaining: {{item.cookingTime}} secs
         </mat-card-title>
       </mat-card-header>
     </mat-card>

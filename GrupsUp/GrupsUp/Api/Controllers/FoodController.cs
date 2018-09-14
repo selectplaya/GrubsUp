@@ -93,6 +93,32 @@ namespace GrupsUp.Api.Controllers
                 PortionSize = 60,
             });
 
+            foods.Add(new FoodModel()
+            {
+                Name = "FastFood",
+                Category = FoodCategoryModel.Vegetable,
+                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
+                    CookingMethodModel.Microwave, CookingMethodModel.Steam },
+                Image = "https://images.unsplash.com/photo-1506808547685-e2ba962ded60?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cd33fc6d316171dffb724ca209c06fc2&auto=format&fit=crop&w=675&q=80",
+                BaseTime = 15 * 1,
+                TimePerGram = 0,
+                Tempature = 100,
+                PortionSize = 60,
+            });
+
+            foods.Add(new FoodModel()
+            {
+                Name = "super FastFood ",
+                Category = FoodCategoryModel.Vegetable,
+                CookingMethods = new HashSet<CookingMethodModel>() { CookingMethodModel.OvenRoast, CookingMethodModel.Boil,
+                    CookingMethodModel.Microwave, CookingMethodModel.Steam },
+                Image = "https://images.unsplash.com/photo-1506808547685-e2ba962ded60?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cd33fc6d316171dffb724ca209c06fc2&auto=format&fit=crop&w=675&q=80",
+                BaseTime = 5 * 1,
+                TimePerGram = 0,
+                Tempature = 100,
+                PortionSize = 60,
+            });
+
             return Ok(foods);
         }
 
