@@ -26,31 +26,20 @@
         <img class="card-image" mat-card-image src={{selectedFood.image}} >
 
         <mat-card-header>
-          <mat-checkbox
-            [checked]="mainData.selectedFood.isSelected" 
-            (change)="valueChange(food,$event)">
-            Cook me!</mat-checkbox>
+         
           <mat-card-title>
             {{mainData.selectedFood.name}}
           </mat-card-title>
           <mat-card-subtitle>{{mainData.selectedFood.description}}</mat-card-subtitle>
+          <mat-card-subtitle>
+            <mat-checkbox align="left"
+                          [checked]="mainData.selectedFood.isSelected" 
+                          (change)="valueChange(food,$event)">
+              Cook me!</mat-checkbox> <br/>
+            Recommended Portion size: {{mainData.selectedFood.portionSize}}g <br/>
+          </mat-card-subtitle>
         </mat-card-header>
 
-        <mat-card-content class="dashboard-card-content">
-          <mat-card-subtitle>Category: {{mainData.selectedFood.category}}</mat-card-subtitle>
-          <mat-card-subtitle>Cooking Methods</mat-card-subtitle>
-          <mat-list>
-            <a mat-list-item *ngFor="let cookingMethod of mainData.selectedFood.cookingMethods"> {{ cookingMethod }} </a>
-          </mat-list>
-          <p align="left">
-            Portion size: {{mainData.selectedFood.portionSize}}g <br />
-            <b>CookingTime .. TODo</b> <br />
-            CookingTime .. TODo <br />
-            CookingTime .. TODo <br />
-            CookingTime .. TODo <br />
-          </p>
-
-        </mat-card-content>
       </mat-card>
 
     </article>

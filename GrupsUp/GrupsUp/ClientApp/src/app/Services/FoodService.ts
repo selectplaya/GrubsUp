@@ -21,6 +21,9 @@ export class SelectedFood extends Food{
   public weight: number;
   public selectedRarity: string;
   public isSelected: boolean;
+  public waitTime: number;
+  public cookingTime: number;
+  public restTime: number;
 }
 
 

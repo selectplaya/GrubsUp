@@ -37,6 +37,11 @@ export class MeatcomponentComponent {
   set isSelected(value: boolean) {
     
     this.mainData.selectedFood.isSelected = value;
+    //if (value) {
+    //  this.mainData.selectedFoods.add(this.mainData.selectedFood.name);
+    //} else {
+    //  this.mainData.selectedFoods.delete(this.mainData.selectedFood.name);
+    //}
   }
 
   private _foods: Observable<SelectedFood[]>;
@@ -44,9 +49,6 @@ export class MeatcomponentComponent {
   get foods(): Observable<SelectedFood[]> {
     return this._foods;
   }
-  //set foods(value: Observable<Food[]>) {
-  //  this.mainData.foods = value;
-  //}
 
   get selectedFood(): SelectedFood {
     return this.mainData.selectedFood;
@@ -59,7 +61,6 @@ export class MeatcomponentComponent {
 
   public showInfo(food: SelectedFood) {
     this.mainData.selectedFood = food;
-    //this.isSelected = this.mainData.selectedFood.isSelected;
   }
 
   public cook() {
