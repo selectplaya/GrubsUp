@@ -17,6 +17,7 @@ import { MeatcomponentComponent } from './components/meatcomponent/meatcomponent
 import { TimercomponentComponent } from './components/timercomponent/timercomponent.component';
 import { FoodService } from './Services/FoodService';
 import { MainDataService } from './Services/MainDataService';
+import { MinuteSecondsPipe } from './minuteSeconds.Pipe';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MainDataService } from './Services/MainDataService';
     MaincomponentComponent,
     MeatcomponentComponent,
     TimercomponentComponent,
+    MinuteSecondsPipe,
   ],
   entryComponents:[],
   imports: [
@@ -38,4 +40,5 @@ import { MainDataService } from './Services/MainDataService';
   providers: [FoodService, MainDataService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

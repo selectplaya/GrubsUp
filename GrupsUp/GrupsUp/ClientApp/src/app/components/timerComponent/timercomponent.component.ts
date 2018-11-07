@@ -18,7 +18,7 @@ import { switchMap, take, tap } from 'rxjs/operators';
 export class TimercomponentComponent {
   private name = 'TimercomponentComponent';
 
-  public testCurrentTime = 10000;
+  public testCurrentTime = 0;
   private isRunning : boolean = false;
   constructor(public mainData: MainDataService) {
 
